@@ -1,0 +1,25 @@
+main{
+    color: black;
+
+    .team{
+        background-color: $team_bg;
+        border-radius: 14px;
+        margin: 0 60px;
+        margin-top: 61px;
+
+        .navbuttons{
+            background-color: none;
+            color: none;
+            height: 40px;
+            width: 40px;
+        }
+    }
+
+    .luckycases
+    {
+        &__item
+        {
+            background-color: $team_bg;
+        }
+    }
+}

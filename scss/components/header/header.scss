@@ -1,0 +1,58 @@
+header{
+  background-color: $bg_blue;
+  a{
+    color: white;
+    }
+  .navigation
+  {
+      padding: 30px 0;
+
+      &__secondrow
+      {
+          a{
+              margin: 20px 15px;
+          }
+      }
+  }
+  
+  .maininfo
+  {
+      padding: 240px 0;
+      background-image: url("./../images/white.svg"); // white+symbol KAK??!
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+
+      &__img
+      {
+          position: relative;
+          top:200px;
+      }
+  }
+
+  .select
+  {
+      margin: 100px 0;
+      &__leftpart
+      {
+          text-align: right;
+      }
+  }
+  box-shadow: 0 20px 50px 20px gold,
+              0 40px 50px 40px blue; // kak delat ugli po krayam?
+  /*&:after{
+      content: '';
+      width: 100%;
+      margin: 20px 0;
+      box-shadow: 0 20px 50px 20px gold;
+      &:after
+      {
+          content: '';
+          width: 100%;
+          margin: 20px 0;
+          box-shadow: 0 40px 50px 40px blue;
+      }
+  }
+  SLUCHAYNO SDELAL EFFEKT PYATEN NA BACKGROYUND HEADER NIFIGA YA GENYI
+  */
+}
