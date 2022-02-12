@@ -13,6 +13,26 @@ main{
             height: 40px;
             width: 40px;
         }
+
+        &__right
+        {
+            a{    
+                &:hover{
+                    color: blue;
+                }
+                &::after{
+                    content: '';
+                    display: inline-block;
+                    position: relative;
+                    top: 1px;
+                    background-image: url("./../images/Link_Arrow.svg");
+                    width: 12px;
+                    height: 12px;
+                    background-repeat: no-repeat;
+                    background-position: right;
+                }
+            }
+        }
     }
 
     .luckycases

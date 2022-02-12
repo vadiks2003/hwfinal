@@ -1,9 +1,1 @@
 // button > (poslugy >) + (komanda >)
-@mixin arrowbutton {
-    &::after{
-        content: '';
-        background-image: url("./../images/Link_Arrow.svg");
-        background-repeat: no-repeat;
-        background-position: right;
-    }
-}

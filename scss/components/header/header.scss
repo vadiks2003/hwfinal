@@ -1,10 +1,23 @@
 header{
-  background-color: $bg_blue;
+  background-image: url("./../images/bg1.svg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  .psymbol{
+    position: absolute;
+      content: '';
+      background-image: url("./../images/symbol.svg") ;
+      width: 595px;
+      height: 500px;
+      transform: translate(50%,50%);
+      z-index: 0;
+  }
   a{
     color: white;
+    
     }
   .navigation
   {
+     
       padding: 30px 0;
 
       &__secondrow
@@ -17,8 +30,10 @@ header{
   
   .maininfo
   {
+      position: relative;
+      z-index: 1;
       padding: 240px 0;
-      background-image: url("./../images/white.svg"); // white+symbol KAK??!
+      background-image: url("./../images/white.svg"); //  ?!
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
@@ -32,27 +47,84 @@ header{
 
   .select
   {
-      margin: 100px 0;
-      &__leftpart
-      {
-          text-align: right;
-      }
+    margin: 100px 0;
+    &__leftpart
+    {
+
+        text-align: right;    
+        
+    a{
+        margin: 10px 0;
+        font-size: 36px;
+        flex-direction: column;
+        &:hover
+        {
+            color: red;
+            &::after{
+                position: absolute;
+                margin-left: 40px;
+                color: red;
+                content: '';
+                background-image: url("./../images/Separatorchosen.svg");
+                width: 4px;
+                height: 50px;
+                transform: scaleY(140%);
+            }
+        }
+        &:hover:first-child
+        {
+            &::after{
+                position: absolute;
+                
+                width: 4px;
+                height: 50px;           
+                transform: translateY(20%);
+            }
+        }
+        &:hover:last-child
+        {
+            &::after{
+                position: absolute;
+                
+                width: 4px;
+                height: 100px;
+                transform: translateY(-56%);   
+            }
+        }
+    }
+    
+    }
+      
+      .separator{
+        margin: 0 40px;
+    }
   }
-  box-shadow: 0 20px 50px 20px gold,
-              0 40px 50px 40px blue; // kak delat ugli po krayam?
-  /*&:after{
-      content: '';
-      width: 100%;
-      margin: 20px 0;
-      box-shadow: 0 20px 50px 20px gold;
-      &:after
-      {
-          content: '';
-          width: 100%;
-          margin: 20px 0;
-          box-shadow: 0 40px 50px 40px blue;
-      }
+
+  .better{
+    a{
+        color: grey;
+    
+    &:hover{
+        color: grey;
+    }
+    &::after{
+        content: '';
+        display: inline-block;
+        position: relative;
+        top: 1px;
+        background-image: url("./../images/Link_Arrow.svg");
+        width: 12px;
+        height: 12px;
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+    }
   }
-  SLUCHAYNO SDELAL EFFEKT PYATEN NA BACKGROYUND HEADER NIFIGA YA GENYI
-  */
+
+  padding-bottom: 80px;
+  border-radius: 40px;
+
+  box-shadow: 0 30px 0px -20px blue, // &:after?
+              0 60px 0px -40px blue;
+  
 }
