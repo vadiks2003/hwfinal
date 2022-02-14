@@ -1,4 +1,11 @@
 @import "./../bootstrap/scss/bootstrap.scss";
 @import "./common/index";
-@import "./components/header/";
-@import "./components/main/";
+
+@import "./components/index/header";
+@import "./components/index/main";
+@import "./components/index/footer";
+
+@import "./components/services/header";
+@import "./components/services/main";
+
+@import "./components/team"

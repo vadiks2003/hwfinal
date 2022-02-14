@@ -1,0 +1,17 @@
+@include breakpoint-big{
+    div.breakpointOverride{
+        width: 50%;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+@include breakpoint-small{
+    div.breakpointOverride{
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+}

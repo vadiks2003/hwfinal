@@ -11118,6 +11118,27 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.bluebutton:hover {
+  color: blue;
+}
+.bluebutton::after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  background-image: url("./../images/link_arrow_blue.svg");
+  width: 12px;
+  height: 12px;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+header .select__leftpart a:hover, .fadingred {
+  background: -webkit-linear-gradient(right, #EF8080, #F0145A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 body {
   color: white;
   font-family: "Open-Sans", sans-serif;
@@ -11128,21 +11149,25 @@ a {
 }
 
 header {
+  padding-bottom: 80px;
+  border-radius: 0 0 40px 40px;
+  box-shadow: 0 30px 0px -20px blue, 0 60px 0px -40px blue;
+}
+header.index {
   background-image: url("./../images/bg1.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 80px;
-  border-radius: 40px;
-  box-shadow: 0 30px 0px -20px blue, 0 60px 0px -40px blue;
+}
+header .chosenpg {
+  text-decoration: underline;
+}
+header .fullviewport {
+  height: 100vh;
+  min-height: 800px;
 }
 header .psymbol {
   position: absolute;
-  content: "";
-  background-image: url("./../images/symbol.svg");
-  width: 595px;
-  height: 500px;
   transform: translate(50%, 50%);
-  z-index: 0;
 }
 header a {
   color: white;
@@ -11150,7 +11175,20 @@ header a {
 header .navigation {
   padding: 30px 0;
 }
+header .navigation__languages {
+  margin-right: 5px;
+}
+header .navigation__language {
+  text-align: center;
+  margin: 0 10px;
+}
+header .navigation__language:first-child {
+  background-color: red;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
 header .navigation__secondrow a {
+  font-weight: 400;
   margin: 20px 15px;
 }
 header .maininfo {
@@ -11161,6 +11199,19 @@ header .maininfo {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+}
+header .maininfo .shade {
+  width: 80vw;
+  height: 200px;
+  position: absolute;
+  bottom: -10px;
+  background-color: black;
+  background: linear-gradient(180deg, rgba(50, 50, 100, 0) 16.67%, #323264 100%);
+}
+header .maininfo p {
+  font-size: 38px;
+  max-width: 600px;
+  text-align: center;
 }
 header .maininfo__img {
   position: relative;
@@ -11173,12 +11224,10 @@ header .select__leftpart {
   text-align: right;
 }
 header .select__leftpart a {
+  color: #B3B3BA;
   margin: 10px 0;
   font-size: 36px;
   flex-direction: column;
-}
-header .select__leftpart a:hover {
-  color: red;
 }
 header .select__leftpart a:hover::after {
   position: absolute;
@@ -11201,6 +11250,9 @@ header .select__leftpart a:hover:last-child::after {
   width: 4px;
   height: 100px;
   transform: translateY(-56%);
+}
+header .select__rightpart h3, header .select__rightpart .h3, header .select__rightpart p {
+  max-width: 600px;
 }
 header .select .separator {
   margin: 0 40px;
@@ -11226,34 +11278,127 @@ header .better a::after {
 main {
   color: black;
 }
+main .navbuttons {
+  background-color: none;
+  color: none;
+  height: 40px;
+  width: 40px;
+  margin: 20px 0;
+}
 main .team {
   background-color: #F5F5FA;
   border-radius: 14px;
   margin: 0 60px;
   margin-top: 61px;
 }
-main .team .navbuttons {
-  background-color: none;
-  color: none;
-  height: 40px;
-  width: 40px;
+main .team__right {
+  margin: 40px;
 }
-main .team__right a:hover {
-  color: blue;
+main .team__right a {
+  text-transform: uppercase;
+  font-weight: 800;
 }
-main .team__right a::after {
-  content: "";
-  display: inline-block;
-  position: relative;
-  top: 1px;
-  background-image: url("./../images/Link_Arrow.svg");
-  width: 12px;
-  height: 12px;
-  background-repeat: no-repeat;
-  background-position: right;
+main .team__right h3, main .team__right .h3 {
+  font-weight: 800;
+}
+main .luckycases {
+  margin: 0 60px;
+  margin-top: 20px;
+}
+main .luckycases__row:first-of-type(.luckycases__item) {
+  border-radius: 0 0 0 25px;
+}
+main .luckycases__title {
+  color: red;
 }
 main .luckycases__item {
+  border: 4px solid white;
   background-color: #F5F5FA;
+}
+main .luckycases__subitem {
+  background-color: #F5F5FA;
+}
+main .luckycases__subitem:first-child {
+  width: 100%;
+  border: 4px solid white;
+}
+main .luckycases p {
+  margin: 20px 0px;
+}
+main .luckycases span {
+  padding: 20px;
+  color: grey;
+}
+main .luckycases__footer {
+  margin: 30px 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+main .publications {
+  background-color: #F5F5FA;
+  padding: 40px 0 3px 60px;
+}
+main .publications a.bluebutton {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+main .publications h3, main .publications .h3 {
+  font-weight: 700;
+  margin-bottom: 40px;
+  font-size: 42px;
+}
+
+@media (max-width: 1080px) {
+  div.breakpointOverride {
+    width: 50%;
+  }
+  div.breakpointOverride img {
+    width: 100%;
+  }
+}
+@media (max-width: 640px) {
+  div.breakpointOverride {
+    width: 100%;
+  }
+  div.breakpointOverride img {
+    width: 100%;
+  }
+}
+footer {
+  color: black;
+  margin: 32px 0;
+}
+
+header.services {
+  background-image: url("./../images/bg2.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header.services .navigation {
+  margin-bottom: 75px;
+}
+
+main.services .luckycases {
+  margin-top: 50px;
+}
+
+body.teams {
+  color: grey;
+}
+body.teams header {
+  box-shadow: none;
+  padding: 0px;
+}
+body.teams main .teamp h3, body.teams main .teamp .h3 {
+  max-width: 864px;
+  font-size: 42px;
+  margin: 80px 0;
+}
+body.teams footer {
+  background-color: #F5F5FA;
+  border-radius: 30px 30px 0 0;
+  padding: 30px 60px;
 }
 
 /*# sourceMappingURL=index.css.map */

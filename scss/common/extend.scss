@@ -1,0 +1,21 @@
+%bluebutton{
+    &:hover{
+        color: blue;
+    }
+    &::after{
+        content: '';
+        display: inline-block;
+        position: relative;
+        top: 2px;
+        background-image: url("./../images/link_arrow_blue.svg");
+        width: 12px;
+        height: 12px;
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+}
+
+%fadingred
+{
+    @include fadingcolor(right, #EF8080, #F0145A);
+}

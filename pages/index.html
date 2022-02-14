@@ -5,40 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../styles/index.css">
-    <title>Document</title>
+    <title>Про нас</title>
 </head>
 <body>
-    <header>
+    <header class="index endshadow">
         <div class="container">
-            <div class="psymbol"></div>
-            <div class="navigation d-flex justify-content-between">
-                <div class="navigation__logo">
-                    <img src="./../images/logo.svg" alt="">
-                </div>
-                <div class="navigation__panel">
-                    <div class="navigation__firstrow align-center">
-                        <a href="#">УК</a>
-                        <a href="#">РУ</a>
-                        <a href="#">EN</a>
-                        <span>Одеса, Адмріальский пр., 3 · +38 (050) 390 15 91 · </span>
-                        <a href="facebook.com">
-                            <img src="./../images/Facebook.svg" alt="facebook">
+            <div class="fullviewport">
+                <img class="psymbol" src="./../images/symbol.svg" alt="">
+                <div class="navigation d-flex justify-content-between navbar navbar-expand-lg"> <!-- бутсраповский коллапс делать как то добавив jquery + там много багов если сделать через мой файл-->
+                    <div class="navigation__logo">
+                        <a href="./index.html"> 
+                            <img src="./../images/logo.svg" alt="">
                         </a>
                     </div>
-                    <div class="navigation__secondrow d-flex justify-content-end">
-                        <a href="#">про нас</a>
-                        <a href="#">послуги</a>
-                        <a href="#">команда</a>
-                        <a href="#">публікації</a>
-                        <a href="#">контакти</a>
+                    <div class="navigation__panel">
+                        <div class="navigation__firstrow align-center d-flex flex-row">
+                            <div class="navigation__languages d-flex flex-row">
+                                <div class="navigation__language"><a href="#">УК</a></div>
+                                <div class="navigation__language"><a href="#">РУ</a></div>
+                                <div class="navigation__language"><a href="#">EN</a></div>
+                            </div>
+                            <span>Одеса, Адмріальский пр., 3 · +38 (050) 390 15 91 · </span>
+                            <a href="facebook.com">
+                                <img src="./../images/Facebook.svg" alt="facebook">
+                            </a>
+                        </div>
+                        <div class="navigation__secondrow d-flex justify-content-end">
+                            <a href="#" class="text-white">про нас</a>
+                            <a href="./services.html" class="text-white">послуги</a>
+                            <a href="./teams.html" class="text-white">команда</a>
+                            <a href="#" class="text-white">публікації</a>
+                            <a href="#" class="text-white">контакти</a>
+                        </div>
                     </div>
                 </div>
+                <div class="maininfo d-flex justify-content-center align-items-center flex-column">
+                    <p>системний адміністратор правових рішень</p>
+                    <div class="shade"></div>
+                    <a href="#select" class="maininfo__img"><img src="./../images/scrolldown.svg" alt=""></a>
+                </div>
             </div>
-            <div class="maininfo d-flex justify-content-center align-items-center flex-column">
-                <p>системний адміністратор правових рішень</p>
-                <a href="#" class="maininfo__img"><img src="./../images/scrolldown.svg" alt=""></a>
-            </div>
-            <div class="select d-flex justify-content-center">
+            <div class="select d-flex justify-content-center" id="select">
                 <div class="select__leftpart d-flex flex-column col-4">
                     <a href="#">Послідновні</a>
                     <a href="#">Клієнтоорієнтовані</a>
@@ -53,7 +60,7 @@
             </div>
             <div class="better">
                 <a href="#">Послуги</a> <!--&:after content:""  backgorund image; BUTTONBUTTONBUTTON--> 
-                <h3>Що ми вміємо краще за інших?</h3>
+                <h3 class="fadingred">Що ми вміємо краще за інших?</h3>
                 <div class="row g-5">
                     <div class="better__item col-4 gap-2">
                         <img src="./../images/shopping.svg" alt="">
@@ -95,14 +102,12 @@
     <main>
         <div class="container">
             <div class="team d-flex flex-row">
-                <img class="team__left" src="./../images/face.png" alt="zadrot"> <!-- col 3?-->
+                <img class="team__left" src="./../images/face.png" alt=""> 
                 <div class="team__right">
-                    <a href="#">команда</a> <!--BUTTONBUTTONBUTTON-->
-                    <h3>q</h3>
-                    <p>олександр</p>
-                    <p>партнер</p>
-                    <p class="name">Олександр Олександровський</p>
-                    <p class="name">Керуючий партнер</p>
+                    <a class="bluebutton" href="#">команда</a> 
+                    <h3 class="fadingred">Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.</h3>
+                    <p class="name text-muted">Олександр Олександровський</p>
+                    <p class="name text-muted">Керуючий партнер</p>
                 </div>
                 
             </div>
@@ -121,45 +126,83 @@
             </div>
 
             <div class="luckycases">
-                <div class="luckycases__row d-flex">
-                    <div class="column">
-                        <div class="luckycases__title luckycases__item">Успішні кейси</div>
-                        <div class="luckycases__item">
-                            Супровід проекту з купівлі-продажу сільськогосподарської продукції
+                <div class="luckycases__row d-flex row">
+                    <div class="luckycases__item col-4">
+                        <div class="luckycases__title luckycases__subitem"><p class="fadingred">Успішні кейси</p></div>
+                        <div class="luckycases__subitem">
+                            <p>Супровід проекту з купівлі-продажу сільськогосподарської продукції</p>
                             <span class="source">Hillel IT School</span>
                         </div>
                     </div>
-                    <div class="luckycases__item">
-                        Підготовка комплексного юридичного висновку для європейського банку
+                    <div class="luckycases__item col-4">
+                        <p>Підготовка комплексного юридичного висновку для європейського банку</p>
                         <span class="source">WannaBiz</span>
                     </div>
-                    <div class="luckycases__item">
-                        Супровід проекту з купівлі-продажу сільськогосподарської продукції
+                    <div class="luckycases__item col-4">
+                        <p>Супровід проекту з купівлі-продажу сільськогосподарської продукції</p>
                         <span class="source">tapgerine</span>
                     </div>
-                    <div class="luckycases__item">
-                        Представництво інтересів великого зернотрейдера в податковому спорі
+                    <div class="luckycases__item col-4">
+                        <p>Представництво інтересів великого зернотрейдера в податковому спорі</p>
                         <span class="source">3D LOOK</span>
                     </div>
-                    <div class="luckycases__item">
-                        Оскарження податкових повідомлень-рішень ДФС
+                    <div class="luckycases__item col-4">
+                        <p>Оскарження податкових повідомлень-рішень ДФС</p>
                         <span class="source">adtelligent</span>
                     </div>
-                    <div class="luckycases__item">
-                        Супровід проекту з кредитування агротрейдерів мальтійським банком
+                    <div class="luckycases__item col-4">
+                        <p>Супровід проекту з кредитування агротрейдерів мальтійським банком</p>
                         <span class="source">Clikky</span>
                     </div>
                 </div>
                 <div class="luckycases__footer d-flex justify-content-center">
                     Вже довіряють нам
-                </div>
+                </div>  
+            </div>
+        </div>
+        <div class="container">
+            <div class="companies row">
+                <div class="col-3 breakpointOverride"><img src="./../images/logos/hilel.svg"  alt=""></div>
+                <div class="col-3 breakpointOverride"><img src="./../images/logos/wannabiz.svg"  alt=""></div>
+                <div class="col-3 breakpointOverride"><img src="./../images/logos/tapgerine.svg" alt=""></div>
+                <div class="col-3 breakpointOverride"><img src="./../images/logos/3dlook.svg"  alt=""></div>
+                <div class="col-3 breakpointOverride"><img src="./../images/logos/orangear.svg"  alt=""></div>
+                <div class="col-3 breakpointOverride"><img src="./../images/logos/adteligent.svg"  alt=""></div>
+                <div class="col-3 breakpointOverride"><img src="./../images/logos/clickky.svg"  alt=""></div>
+                <div class="col-3 breakpointOverride"><img src="./../images/logos/ecoleasing.svg"  alt=""></div>
+                <div class="col-3 breakpointOverride"><img src="./../images/logos/infratek.svg"  alt=""></div>
+                <div class="col-3 breakpointOverride"><img src="./../images/logos/citypark.svg"  alt=""></div>
+                <div class="col-3 breakpointOverride"><img src="./../images/logos/artprint.svg"  alt=""></div>
+                <div class="col-3 breakpointOverride"><img src="./../images/logos/ultimatecard.svg"  alt=""></div>
+            </div>
+        </div>
+        <div class="publications">
+            <div class="container">
+                <a href="#" class="bluebutton">Публікації</a>
+                <h3 class="fadingred">Нам є що розповісти</h3>
+                <hr>
             </div>
         </div>
         
     </main>
 
     <footer>
-
+        <div class="container">
+            <div class="container__toppart d-flex justify-content-between">
+                <div class="container__lefttoppart">
+                    Одеса, Адміральський пр., 3
+                    <a href="#">Подивитися на мапі</a>
+                </div>
+                <div class="container__righttoppart">
+                    <p class="text-muted">© 2021 ТОВ Юридична компанія «HLEGALS»</p>
+                </div>
+            </div>
+            <div class="container__bottompart">
+                <img src="" alt="facebooklogo">
+                <span>+38 (050) 390 15 91</span>
+                <a href="mailto:contact@hlegals.net">contact@hlegals.net</span>
+            </div>
+        </div>
     </footer>
     <script src="./../bootstrap/js/src/"></script>
 </body>

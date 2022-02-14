@@ -6,3 +6,12 @@ body{
 a{
     text-decoration: none;
 }
+
+.bluebutton{
+    @extend %bluebutton;
+}
+
+.fadingred
+{
+    @extend %fadingred;
+}

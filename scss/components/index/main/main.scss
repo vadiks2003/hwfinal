@@ -1,0 +1,106 @@
+main{
+    color: black;
+
+    .navbuttons{
+        background-color: none;
+        color: none;
+        height: 40px;
+        width: 40px;
+        margin: 20px 0;
+    }
+
+    .team{
+        background-color: $team_bg;
+        border-radius: 14px;
+        margin: 0 60px;
+        margin-top: 61px;
+
+        
+
+        &__right
+        {
+            margin: 40px;
+
+            a{   
+                text-transform: uppercase;
+                font-weight: 800;
+                
+                
+            }
+            h3{
+                font-weight: 800;
+
+            }
+        }
+
+
+    }
+
+    .luckycases
+    {
+        margin: 0 60px;
+        margin-top: 20px;
+
+        &__row
+        {
+            &:first-of-type(.luckycases__item)
+            {
+                border-radius: 0 0 0 25px;
+            }
+        }
+
+        &__title
+        {
+            color: red;
+        }
+
+        &__item
+        {
+            
+            border: 4px solid white;
+            background-color: $team_bg;
+        }
+
+        &__subitem{
+            &:first-child{
+                width: 100%;
+                border: 4px solid white;
+            }
+            background-color: $team_bg;
+            
+        }
+
+        p{
+            margin: 20px 0px;
+        }
+
+        span{
+            padding:20px;
+            color: grey;
+        }
+
+        &__footer
+        {
+            margin: 30px 0;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    }
+
+    .publications{
+        background-color: $team_bg;
+        padding: 40px 0 3px 60px;
+
+        a.bluebutton{
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        h3{
+            font-weight: 700;
+            margin-bottom: 40px;
+            font-size: 42px;
+        }
+    }
+}

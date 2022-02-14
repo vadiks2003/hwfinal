@@ -1,1 +1,18 @@
-// button > (poslugy >) + (komanda >)
+
+@mixin fadingcolor($direction, $firstcolor, $secondcolor) {
+    background: -webkit-linear-gradient($direction, $firstcolor, $secondcolor);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin breakpoint-big {
+    @media (max-width: $bigbp) {
+        @content;
+    }
+}
+
+@mixin breakpoint-small {
+    @media (max-width: $smallbp) {
+        @content;
+    }
+}
