@@ -11148,8 +11148,11 @@ a {
   text-decoration: none;
 }
 
+h3, .h3 {
+  font-weight: 700;
+}
+
 header {
-  padding-bottom: 80px;
   border-radius: 0 0 40px 40px;
   box-shadow: 0 30px 0px -20px blue, 0 60px 0px -40px blue;
 }
@@ -11190,6 +11193,12 @@ header .navigation__language:first-child {
 header .navigation__secondrow a {
   font-weight: 400;
   margin: 20px 15px;
+}
+header .index.bg2 {
+  background-image: url(./../images/bg2.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 80px;
 }
 header .maininfo {
   position: relative;
@@ -11348,6 +11357,19 @@ main .publications h3, main .publications .h3 {
   margin-bottom: 40px;
   font-size: 42px;
 }
+main .publications__item {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 413px;
+  background-color: white;
+  border-radius: 12px;
+}
+main .publications__item img {
+  width: 100%;
+}
+main .publications__item__content {
+  padding: 20px;
+}
 
 @media (max-width: 1080px) {
   div.breakpointOverride {
@@ -11367,7 +11389,63 @@ main .publications h3, main .publications .h3 {
 }
 footer {
   color: black;
-  margin: 32px 0;
+  padding: 32px 0;
+  background-color: #F5F5FA;
+}
+
+body.aboutus {
+  color: gray;
+}
+body.aboutus header {
+  box-shadow: none;
+}
+body.aboutus main .info__item {
+  max-width: 641px;
+}
+body.aboutus main .info__item h3, body.aboutus main .info__item .h3 {
+  font-size: 42px;
+}
+body.aboutus main .info__stat__item {
+  margin: 0 60px;
+}
+body.aboutus main .teamimg {
+  margin: 100px 0 80px 0;
+}
+body.aboutus main .teamimg img {
+  width: 100%;
+}
+body.aboutus main .description {
+  margin-bottom: 93px;
+}
+body.aboutus main .description__item__text {
+  font-size: 21px;
+  max-width: 641px;
+  margin-right: 40px;
+}
+body.aboutus main .description__item__header {
+  max-width: 414px;
+  font-size: 42px;
+}
+body.aboutus main .achievements {
+  padding-top: 14px;
+}
+body.aboutus main .achievements__wrapper {
+  background-color: #F5F5FA;
+}
+body.aboutus main .achievements__header {
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+body.aboutus main .achievements .aboutus__navbuttons {
+  margin: 15px 0;
+}
+body.aboutus .hraboutus {
+  margin: 0;
+}
+body.aboutus footer {
+  background-color: #F5F5FA;
+  margin: 0;
+  padding: 32px 0;
 }
 
 header.services {

@@ -1,4 +1,9 @@
 header{
+    border-radius: 0 0 40px 40px;
+
+    box-shadow: 0 30px 0px -20px blue, // ?
+    0 60px 0px -40px blue;
+
   &.index{
     background-image: url("./../images/bg1.svg");
     background-repeat: no-repeat;
@@ -58,6 +63,14 @@ header{
       
   }
   
+  .index.bg2
+  {
+      background-image: url(./../images/bg2.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding-bottom: 80px;
+  }
+
   .maininfo
   {
       position: relative;
@@ -171,10 +184,6 @@ header{
     }
   }
 
-  padding-bottom: 80px;
-  border-radius: 0 0 40px 40px;
-
-    box-shadow: 0 30px 0px -20px blue, // &:after?
-    0 60px 0px -40px blue;
+  
   
 }
