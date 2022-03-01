@@ -19,3 +19,20 @@ a{
 h3{
     font-weight: 700;
 }
+
+.noShadow
+  {
+      box-shadow: none;
+  }
+
+.whiteHeader{
+    .navigation__firstrow{
+        color: grey;
+    }
+    .navigation__language
+    {
+        a{
+            color: white;
+        }
+    }
+}

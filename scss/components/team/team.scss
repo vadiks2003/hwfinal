@@ -15,6 +15,17 @@ body.teams
                 margin: 80px 0;
             }
         }
+
+        .faces
+        {
+            margin-bottom: 60px;
+            
+            .face{
+                img{
+                    margin-bottom: 20px;
+                }
+            }
+        }
     }
 
     footer{
